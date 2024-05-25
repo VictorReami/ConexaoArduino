@@ -134,7 +134,9 @@ public class ReceberSerial  {
                             if (receber != null) {
                                 //Se for recebido 0, saira do Looping e executada o primeiro video padrão
                                 posicaoVideoLooping = receber.indexOf("0");
-                                break;
+                                if (posicaoVideoLooping != -1) {
+                                    break;
+                                }
                             }
 
                             //Seta variavel
